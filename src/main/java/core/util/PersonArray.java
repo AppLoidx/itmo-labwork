@@ -9,7 +9,9 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayDeque;
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 /**
  * @author Arthur Kupriyanov
@@ -22,6 +24,13 @@ public class PersonArray extends ArrayDeque<Person> {
 
     public String getChangedDate() {
         return changedDate;
+    }
+
+    public void sort(){
+        PersonArray deque = new PersonArray();
+        List<Person> temp = this.stream().sorted().collect(Collectors.toList());
+        this.clear();
+        this.addAll(temp);
     }
 
     public void setChangedDate(){
