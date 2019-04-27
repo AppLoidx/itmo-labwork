@@ -5,6 +5,7 @@ import core.util.PersonArray;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -39,6 +40,7 @@ public class Application {
                 e.printStackTrace();
             }
         }));
+
 
         Scanner sc = new Scanner(System.in);
         Commander commander = new Commander(col);
