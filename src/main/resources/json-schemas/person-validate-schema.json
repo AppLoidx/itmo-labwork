@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "properties": {
+    "name":{
+      "type": "string",
+      "description": "name of person"
+    },
+    "class": {
+      "type": "string",
+      "description": "class of person"
+    },
+    "height": {
+      "type" : "integer",
+      "description" : "person width"
+    },
+    "img": {
+      "type" : "string",
+      "description" : "path to person sprite"
+    },
+    "video": {
+      "type" : "string",
+      "description" : "path to video resource"
+    }
+  },
+  "required": ["name", "class", "height"],
+  "additionalProperties": false
+}

@@ -1,0 +1,5 @@
+class,name,height,sourcePath,playable(resource)
+class=Neko, name=China, height=140, imgSource=assets/china.png, playable=nyan.mp4
+class=Neko, name=Hanekawa, height=180, imgSource=assets/hanekawa.png
+class=Human, name=Lilly, height=150, imgSource=assets/trombosit.png
+class=Tanuki, name=Raphtalia, height=170, imgSource=assets/raphtalia.png
