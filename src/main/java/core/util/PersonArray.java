@@ -7,10 +7,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayDeque;
-import java.util.Date;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -94,5 +91,28 @@ public class PersonArray extends ArrayDeque<Person> {
             c = c*31 + p.hashCode();
         }
         return c;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof PersonArray){
+            List<Person> aObj = new ArrayList<>(((PersonArray) obj));
+            List<Person> thisObj = new ArrayList<>(this);
+
+            Collections.sort(aObj);
+            Collections.sort(thisObj);
+
+            if (aObj.size() == thisObj.size()){
+                for (int i = 0; i < aObj.size() - 1; i++){
+                    if (!aObj.get(i).equals(thisObj.get(i))){
+                        return false;
+                    }
+                }
+                return true;
+            }
+            return false;
+        }
+
+        return false;
     }
 }
